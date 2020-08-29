@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 typedef struct Node
 {
     int value;
@@ -51,10 +53,12 @@ int get_by_index(List* head, int pos)
 
 int main()
 {
-    List* head = init(10);
-    add(1, head);
-    add(2, head);
-    add(3, head);
-    ls(head);
-    printf("%d\n",get_by_index(head,2));
+    char str[] = "Hello GitHub!";
+    char *fortok = strtok(str, " ");
+    while(fortok != NULL)
+    {
+        printf("%s",fortok);
+        fortok = strtok(NULL, " ");
+    }
+    return 0;
 } 
